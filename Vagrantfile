@@ -15,10 +15,14 @@ Vagrant.configure("2") do |config|
   # provision several usefull configuration files from guest to guest
   config.vm.provision "file", source: "~/.ssh/id_rsa", destination: "/home/vagrant/.ssh/id_rsa"
   config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "/home/vagrant/.ssh/id_rsa.pub"
+  config.vm.provision "file", source: "~/.ssh/id_ed25519", destination: "/home/vagrant/.ssh/id_ed25519"
+  config.vm.provision "file", source: "~/.ssh/id_ed25519.pub", destination: "/home/vagrant/.ssh/id_ed25519.pub"
 
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
     chmod 600 /home/vagrant/.ssh/id_rsa
     chmod 644 /home/vagrant/.ssh/id_rsa.pub
+    chmod 600 /home/vagrant/.ssh/id_ed25519
+    chmod 644 /home/vagrant/.ssh/id_ed25519.pub
 
     sudo apt-get update -y
 
