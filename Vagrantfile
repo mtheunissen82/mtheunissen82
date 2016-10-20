@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
     npm install -g diff-so-fancy
 
     curl -o git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
-    mv git-completion.bash /etc/bash_completion.d
+    sudo mv git-completion.bash /etc/bash_completion.d
   SHELL
 
   end
