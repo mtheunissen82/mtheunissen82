@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
 
     sudo apt-get update -y
 
-    sudo apt-get install -y vim curl cowsay fortune git silversearcher-ag npm dos2unix
+    sudo apt-get install -y vim curl cowsay fortune git silversearcher-ag npm dos2unix tmux psmisc
 
     npm install -g diff-so-fancy
 
