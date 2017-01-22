@@ -28,7 +28,10 @@ Vagrant.configure("2") do |config|
 
     sudo apt-get update -y
 
-    sudo apt-get install -y vim curl cowsay fortune git silversearcher-ag npm dos2unix tmux psmisc
+    sudo apt-get install -y vim curl cowsay fortune git silversearcher-ag npm dos2unix tmux psmisc lynx
+
+    # xclip dependency for tmux copycat
+    sudo apt-get install -y xclip
 
     npm install -g diff-so-fancy
 
