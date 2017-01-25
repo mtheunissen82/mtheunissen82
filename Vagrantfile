@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
 
     sudo apt-get update -y
 
-    sudo apt-get install -y vim curl cowsay fortune git silversearcher-ag npm dos2unix tmux psmisc lynx
+    sudo apt-get install -y vim curl cowsay fortune git silversearcher-ag npm dos2unix tmux psmisc lynx unzip
 
     # xclip dependency for tmux copycat
     sudo apt-get install -y xclip
@@ -41,10 +41,11 @@ Vagrant.configure("2") do |config|
     # install composer
     ./composer-installer
     chmod a+x composer.phar
-    sudo mv composer.phar /usr/local/bin/composer.phar
+    sudo mv composer.phar /usr/local/bin/composer
 
-    # install php-cs-fixer
-    composer global update friendsofphp/php-cs-fixer
+    # install php-cs-fixer with composer
+    composer global require friendsofphp/php-cs-fixer
+    sudo ln -s ~/.config/composer/vendor/friendsofphp/php-cs-fixer /usr/local/bin/php-cs-fixer
   SHELL
 
   end
