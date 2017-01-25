@@ -37,6 +37,11 @@ Vagrant.configure("2") do |config|
 
     curl -o git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
     sudo mv git-completion.bash /etc/bash_completion.d
+
+    # install php-cs-fixer 2.0
+    curl -L https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.0.0/php-cs-fixer.phar -o php-cs-fixer
+    sudo chmod a+x php-cs-fixer
+    sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer
   SHELL
 
   end
