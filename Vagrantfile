@@ -29,6 +29,8 @@ Vagrant.configure("2") do |config|
     sudo apt-get update -y
 
     sudo apt-get install -y vim curl cowsay fortune git silversearcher-ag npm dos2unix tmux psmisc lynx unzip ascii
+    sudo apt-get install -y corkscrew
+    sudo apt-get install -y proxytunnel
 
     # xclip dependency for tmux copycat
     sudo apt-get install -y xclip
