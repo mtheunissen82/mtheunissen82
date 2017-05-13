@@ -32,6 +32,7 @@ Vagrant.configure("2") do |config|
     sudo apt-get install -y corkscrew
     sudo apt-get install -y proxytunnel
     sudo apt-get install -y autossh
+    sudo apt-get install -y pv
 
     # xclip dependency for tmux copycat
     sudo apt-get install -y xclip
