@@ -37,8 +37,8 @@ Vagrant.configure("2") do |config|
     # xclip dependency for tmux copycat
     sudo apt-get install -y xclip
 
-    npm install -g diff-so-fancy
-    npm install -g tcp-over-websockets
+    sudo npm install -g diff-so-fancy
+    sudo npm install -g tcp-over-websockets
 
     curl -o git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
     sudo mv git-completion.bash /etc/bash_completion.d
